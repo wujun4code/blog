@@ -17,7 +17,9 @@ description = "About me"
 - **Birthdate:** 1989
 - **Education:** Bachelor's in Software Engineering, Liaoning University of Technology (2007-2011)
 - **Years of Experience:** 13
-- **Technical Blog:** [http://blog.shouyicheng.com](http://blog.shouyicheng.com)
+- **Technical Blog:** 
+    - [个人博客- 中文](https://blog.shouyicheng.com)
+    - [Jun's Blog - English](https://junwu.shouyicheng.com/)
 - **Github:** [http://github.com/wujun4code](http://github.com/wujun4code)
 
 # Summary
@@ -108,11 +110,7 @@ An outsourcing project on-site at Microsoft, building the official website for t
 - [localKube](https://github.com/kubernetes-go/localkube): CI/CD command-line tool based on Microk8s and Docker for Kubernetes. Supports multi-cluster multi-template rendering to generate Yaml files, relying on docker/helm/git for compilation, packaging, template rendering, deployment, and other convenient functions.
 - [DoChat](https://github.com/wujun4code/DoChat): Live Chat Demo based on Ionic 2.
 
-## Technical Articles
-
-- [个人博客- 中文](https://blog.shouyicheng.com)
-
-# Skills
+# Skill set
 
 - **Programming Languages:** C# (Proficient), TypeScript (Proficient)
 - **Web Development:** React (Basic), Angular (Basic)
@@ -123,13 +121,14 @@ An outsourcing project on-site at Microsoft, building the official website for t
 - **Frontend Tools:** Gulp (Proficient), SaSS (Basic), Gatsby (Basic)
 - **Databases:** MongoDB (Proficient), SQL Server (Basic)
 - **Message Queues:** RabbitMQ (Proficient), Kafka (Basic)
-- **Version Control/Deployment Tools:** Git (Proficient), Markdown (Proficient), Jenkins (Proficient), Azure DevOps (Proficient), GitHub Actions (Proficient)
-- **Virtualization:** System Center (Basic), Kubernetes (Proficient)
+- **Version Control/Deployment Tools:** Git (Proficient), Markdown (Proficient),
+- **CI/CD**: Jenkins (Proficient), Azure DevOps (Proficient), GitHub Actions (Proficient), FluxCD(Proficient), Harness(Proficient)
+- **Virtualization:** Kubernetes (Proficient), System Center (Basic)
 - **Backend Components:** Kubernetes (Proficient), Redis (Basic), ELK (Proficient), Docker (Proficient)
 - **Testing:** XUnit (Proficient), Mocha (Proficient)
-- **Cloud Platforms:** GCP (Proficient), Azure (Proficient)
-- **IDEs:** Visual Studio (Proficient), Visual Studio Code (Proficient)
-- **Operating Systems:** Linux (ElementaryOS) (Proficient), macOS (Proficient), Windows (Proficient)
+- **Cloud Platforms:** GCP (Proficient), Azure (Proficient), Tencent Cloud/Aliyun/DigitalOcean (Basic)
+- **IDEs:** Visual Studio (Proficient), Visual Studio Code (Proficient), IDEA(Basic)
+- **Operating Systems:** Linux (ElementaryOS,Ubuntu) (Proficient), macOS (Proficient), Windows (Proficient)
 - **Language:** English (Fluent)
 
 Feel free to let me know if you have any specific preferences or if there are any modifications you'd like!
