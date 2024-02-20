@@ -25,10 +25,18 @@ description = "About me"
 # Summary
 
 I am a seasoned full-stack developer with a comprehensive background in C# across various product lines, including Unity, WPF, SystemCenter, WP, ASP.NET, and .NET Core. Proficient in backend microservices development using Kubernetes and Docker. My expertise extends to diverse client platforms such as iOS, Android, Hybrid, and Web. I have a strong ability to quickly adapt to and utilize unfamiliar frameworks and technologies, demonstrating proficiency in tool application and framework utilization. I excel in understanding and interpreting requirements, with robust communication skills to convey complex technical details to colleagues with different backgrounds. Effective communication with international teams in English is one of my strengths. I have experience in maintaining large technical documentation projects and am skilled in copywriting.
+Now I am running my own Kubernetes cluster under the domain `shouyicheng.com`, for example, [个人博客- 中文](https://blog.shouyicheng.com) is running inside a Kubernetes hosted by Azure(AKE). for more samples please visit 
+
+- [Bookstack sample](https://bookstack.shouyicheng.com/)
+- [Keycloak sample](https://keycloak.shouyicheng.com/)
+- [Minio sample](https://console.minio.shouyicheng.com/)
+- [Strapi sample](https://strapi.shouyicheng.com/)
 
 # Work Experience
 
 ## iHerb.com (January 2019 - January 2024)
+
+During this period, I have been serving as a senior development engineer and participated in the development of many core projects. As a core member of scrum team.
 
 ### Catalog
 As a full-stack developer, I utilized multiple languages to implement business functionalities in various business components. Implemented a GraphQL data API using TypeScript and apollographql framework for Web (Desktop+React Mobile Web)/Mobile App/Mini Program. Also responsible for maintaining Web pages using MVC.
@@ -59,6 +67,8 @@ As an architect and backend developer, provided data APIs to Mobile App and Mini
 - **Technology Stack:** C#/Kubernetes/Jenkins CI/CD/MongoDB/.NET Core 2.2
 
 ## Leancloud (April 2014 - December 2018)
+
+The core C# developer and maintainer of official tech docs.
 
 ### C# SDK
 Responsible for daily maintenance of the C# SDK for Unity/Windows Phone/Windows Desktop/WPF/Xamarin, developing various cross-platform SDKs using Visual Studio.
@@ -119,7 +129,7 @@ An outsourcing project on-site at Microsoft, building the official website for t
 - **Web Frameworks:** ASP.NET Core (Proficient), Express (Basic)
 - **Frontend Frameworks:** Angular 2+ (Basic), React (Basic)
 - **Frontend Tools:** Gulp (Proficient), SaSS (Basic), Gatsby (Basic)
-- **Databases:** MongoDB (Proficient), SQL Server (Basic)
+- **Databases:** MongoDB (Proficient), SQL Server (Basic), Postgres(Basic)
 - **Message Queues:** RabbitMQ (Proficient), Kafka (Basic)
 - **Version Control/Deployment Tools:** Git (Proficient), Markdown (Proficient),
 - **CI/CD**: Jenkins (Proficient), Azure DevOps (Proficient), GitHub Actions (Proficient), FluxCD(Proficient), Harness(Proficient)
