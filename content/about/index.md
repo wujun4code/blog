@@ -5,8 +5,6 @@ date = "2024-01-19"
 description = "About me"
 +++
 
-# Contact Information
-
 - **Email:** junwu@shouyicheng.com
 - **WeChat:** wing_wj
 
@@ -22,123 +20,119 @@ description = "About me"
     - [Jun's Blog - English](https://junwu.shouyicheng.com/)
 - **Github:** [http://github.com/wujun4code](http://github.com/wujun4code)
 
-# Summary
+
+## Education
+
+**Liaoning University of Technology**
+  ~ Anshan, Liaoning
+
+Bachelor's in Software Engineering
+  ~ 09/2007 - 01/2011
+
+## Summary
 
 I am a seasoned full-stack developer with a comprehensive background in C# across various product lines, including Unity, WPF, SystemCenter, WP, ASP.NET, and .NET Core. Proficient in backend microservices development using Kubernetes and Docker. My expertise extends to diverse client platforms such as iOS, Android, Hybrid, and Web. I have a strong ability to quickly adapt to and utilize unfamiliar frameworks and technologies, demonstrating proficiency in tool application and framework utilization. I excel in understanding and interpreting requirements, with robust communication skills to convey complex technical details to colleagues with different backgrounds. Effective communication with international teams in English is one of my strengths. I have experience in maintaining large technical documentation projects and am skilled in copywriting.
 Now I am running my own Kubernetes cluster under the domain `shouyicheng.com`, for example, [个人博客- 中文](https://blog.shouyicheng.com) is running inside a Kubernetes hosted by Azure(AKE). for more samples please visit 
 
-- [Bookstack sample](https://bookstack.shouyicheng.com/)
-- [Keycloak sample](https://keycloak.shouyicheng.com/)
-- [Minio sample](https://console.minio.shouyicheng.com/)
-- [Strapi sample](https://strapi.shouyicheng.com/)
+- [Bookstack](https://bookstack.shouyicheng.com/)
+- [Keycloak](https://keycloak.shouyicheng.com/)
+- [Minio](https://console.minio.shouyicheng.com/)
+- [Strapi](https://strapi.shouyicheng.com/)
 
-# Work Experience
 
-## iHerb.com (January 2019 - January 2024)
+## Work Experience
 
-During this period, I have been serving as a senior development engineer and participated in the development of many core projects. As a core member of scrum team.
+### Senior Beckend Engineer @iHerb.com | 01/2019 - 01/2024
 
-### Catalog
-As a full-stack developer, I utilized multiple languages to implement business functionalities in various business components. Implemented a GraphQL data API using TypeScript and apollographql framework for Web (Desktop+React Mobile Web)/Mobile App/Mini Program. Also responsible for maintaining Web pages using MVC.
-- **Technology Stack:** C#/.NET Core/SQL Server/React/ASP.NET MVC
+- iHerb is an E-commerce platform that sells health care products. During this period, I have been serving as a senior development engineer and participated in the development of many core projects. Participated in all projects related to e-commerce business
 
-#### Project: Catalog GraphQL
-Developed an Apollo-based Node.js backend middleware serving as the aggregation API for the entire website. Aggregated data from upstream APIs including orders, product information, inventory, payments, personal information, etc., and provided it downstream using GraphQL. Downstream includes Web frontend, SSR-rendering backend, Mobile App, and WeChat Mini Program.
-- **Technology Stack:** Apollo/NodeJS/Dgraph/Kafka
+### Proejcts - Roles - Tech Stack
 
-#### Project: Welcome Mat
-Implemented the backend for attracting new user registrations and providing the first order discount code. Designed and executed a comprehensive validation process during email registration, each requiring a different discount code. Independently completed the entire backend module from design, coding to deployment, and successfully launched.
-- **Technology Stack:** C#/.NET Core/SQL Server
+**Catalog - Core full-stack Developer**
 
-### UGC
-Backend developer role responsible for maintaining user comments and Q&A. Used .NET Core 6.0 as the core API layer, with Elasticsearch as a full-text search engine, MongoDB for persistent storage, RabbitMQ for handling user-submitted comments and Q&A, and Hangfire for periodic data processing and adapting to new requirements.
-- **Technology Stack:** .NET Core 6.0/Elasticsearch/MongoDB/RabbitMQ/Hangfire
+- As a full-stack developer, I utilized multiple languages to implement business functionalities in various business components. Implemented a GraphQL data API using TypeScript and apollographql framework for Web (Desktop+React Mobile Web)/Mobile App/Mini Program. Also responsible for maintaining Web pages using MVC.
+- **C#/.NET Core/Kubernetes/SQL Server/React/ASP.NET MVC/Apollo GraphQL/NodeJS/Dgraph/Kafka**
 
-#### Project: Gateway API
-Developed an API for SEO on the server side. Redirected sub-sites based on different countries, regions, and languages, serving as the core SEO middleware for the entire UGC project. Independently completed API design, data source organization, cache strategy formulation, coding, unit testing, release, and deployment.
-- **Technology Stack:** C#/Kubernetes/Jenkins CI/CD/MongoDB/.NET Core 3.0
+**UGC - Core Backend developer** 
+- Backend developer role responsible for maintaining user comments and Q&A. Used .NET Core 6.0 as the core API layer, with Elasticsearch as a full-text search engine, MongoDB for persistent storage, RabbitMQ for handling user-submitted comments and Q&A, and Hangfire for periodic data processing and adapting to new requirements.
+- **C#/.NET Core/Kubernetes/SQL Server/ASP.NET MVC/Elasticsearch/MongoDB/RabbitMQ/Hangfire**
 
-#### Project: Incentive Review Mechanism
-Functionality involved rewarding users with $1 in cash for submitting a valid review. Designed the entire process from user submission of a review to awarding $1. Implemented a thorough review process, including scanning user-added reviews, scoring reviews, verifying review effectiveness, and checking past review records. Utilized the Chain of Responsibility pattern to improve efficiency and code readability.
-- **Technology Stack:** .NET Core 6.0/RabbitMQ/MongoDB
+**Gateway API - Core Backend developer**
 
-### BFF (Backend For Frontend)
-As an architect and backend developer, provided data APIs to Mobile App and Mini Program. Built a Web API project based on ASP.NET Core, a database microservice using Parse Server, and utilized MongoDB for storage. Redis was used for frontend caching.
-- **Technology Stack:** C#/Kubernetes/Jenkins CI/CD/MongoDB/.NET Core 2.2
+- Developed an API for SEO on the server side. Redirected sub-sites based on different countries, regions, and languages, serving as the core SEO middleware for the entire UGC project. Independently completed API design, data source organization, cache strategy formulation, coding, unit testing, release, and deployment.
+- **C#/.NET Core/Kubernetes/SQL Server/ASP.NET MVC**
 
-## Leancloud (April 2014 - December 2018)
+**Incentive Review Mechanism**
+- Functionality involved rewarding users with $1 in cash for submitting a valid review. Designed the entire process from user submission of a review to awarding $1. Implemented a thorough review process, including scanning user-added reviews, scoring reviews, verifying review effectiveness, and checking past review records. Utilized the Chain of Responsibility pattern to improve efficiency and code readability.
+- **C#/.NET Core 6.0/Kubernetes/RabbitMQ/MongoDB**
+
+**BFF (Backend For Frontend)**
+- As an architect and backend developer, provided data APIs to Mobile App and Mini Program. Built a Web API project based on ASP.NET Core, a database microservice using Parse Server, and utilized MongoDB for storage. Redis was used for frontend caching.
+- **C#/.NET Core 2.2/Kubernetes/Jenkins CI/CD/MongoDB**
+
+### Development Engineer@Leancloud.com | 05/2014 - 12/2018
 
 The core C# developer and maintainer of official tech docs.
 
-### C# SDK
-Responsible for daily maintenance of the C# SDK for Unity/Windows Phone/Windows Desktop/WPF/Xamarin, developing various cross-platform SDKs using Visual Studio.
-- **Technology Stack:** C#/Unity3D
+### Proejcts - Roles - Tech Stack
 
-### Realtime Chat Component SDK
-Developed a C# SDK for a client-side real-time chat component based on WebSocket. The server-side used Kafka for message pushing. The client-side encapsulated server-side chat rooms, groups, private messages, and other functionalities, designing C# interface protocols and writing code.
-- **Technology Stack:** C#
+**C# SDK -  Core Developer**
+- Responsible for daily maintenance of the C# SDK for Unity/Windows Phone/Windows Desktop/WPF/Xamarin, developing various cross-platform SDKs using Visual Studio.
+- **C#/Unity3D**
 
-### LeanCloud Official Documentation - [https://docs.leancloud.cn/](https://docs.leancloud.cn/)
-Mainly responsible for Chinese documentation writing and maintenance, as well as writing and reviewing example code.
-- **Technology Stack:** Nunjucks/Markdown/jQuery
+**Realtime Chat Component SDK - Core Developer**
+- Developed a C# SDK for a client-side real-time chat component based on WebSocket. The server-side used Kafka for message pushing. The client-side encapsulated server-side chat rooms, groups, private messages, and other functionalities, designing C# interface protocols and writing code.
+- **C#/WebSocket/Protobuf**
 
-### Other Projects
 
-## Weichuang (Beijing) Branch
+**LeanCloud Official Documentation - [https://docs.leancloud.cn/] - Core Writer**
 
-### CloudBox
-Exposed System Center's basic API services to internal WCF services, implementing the functionality of virtualized cloud desktops. Packaged System Center's Powershell API into WCF/REST APIs for client-side calls to create virtual desktop hosts, manage cloud resources, monitor subnets, etc. Main clients were banks and large enterprises, focusing on virtual desktop office solutions. The corresponding product is VMWare. The project involved exposure to Microsoft Azure's public and hybrid cloud, as well as an in-depth understanding of Azure's REST API, especially the encapsulation of asynchronous REST APIs for virtual machine creation.
-- **Technology Stack:** C#/.NET/SQL Server/System Center/WCF/Azure REST API
+- Mainly responsible for Chinese documentation writing and maintenance, as well as writing and reviewing example code.
+- **Nunjucks/Markdown/jQuery**
 
-## Symbio Beijing
+## Middle Software Engineer@wicresoft.com(Beijing) | 10/2013 - 04/2014
 
-Mainly responsible for developing Windows Phone apps based on Silverlight.
+### Proejcts - Roles - Tech Stack
 
-- **Technology Stack:** Silverlight for Windows Phone
+**CloudBox - Core Backend Developer**
 
-## Nokia App Studio
+- Exposed System Center's basic API services to internal WCF services, implementing the functionality of virtualized cloud desktops. Packaged System Center's PowerShell API into WCF/REST APIs for client-side calls to create virtual desktop hosts, manage cloud resources, monitor subnets, etc. Main clients were banks and large enterprises, focusing on virtual desktop office solutions. The corresponding product is VMware. The project involved exposure to Microsoft Azure's public and hybrid cloud, as well as an in-depth understanding of Azure's REST API, especially the encapsulation of asynchronous REST APIs for virtual machine creation.
+- **C#/.NET/SQL Server/System Center/WCF/Azure REST API **
 
-Developed Windows Phone versions corresponding to iOS apps acquired by Nokia. Responsible for three games, using the last version of the XNA engine and Silverlight. This project marked the beginning of understanding Microsoft's XAML technology stack, XNA structure, and MVVM implementation. Although a beginner at the time, the project was extensive, involving twenty-plus games with a team of five to six people, each responsible for three to four games.
-- **Technology Keywords:** C# WPF/Silverlight/XNA/XAML/MVVM WP/Cocos2d
 
-## EverNote Windows Phone
+## Junior Development@Symbio Beijing | 07/2011 - 07/2013
 
-Responsible for the development and iteration of EverNote's Windows Phone version.
+- Mainly responsible for developing Windows Phone apps based on Silverlight.
 
-- **Technology Stack:** Silverlight for Windows Phone
+### Proejcts - Roles - Tech Stack
 
-## Microsoft Ventures Accelerator Website
+**Nokia App Studio - App Developer**
 
-An outsourcing project on-site at Microsoft, building the official website for the Microsoft Ventures Accelerator. A showcase project using ASP.NET MVC/jQuery/Azure SQL Server.
-- **Technology Stack:** ASP.NET MVC/jQuery/Azure SQL Server
+- Developed corresponding Windows Phone versions of iOS applications acquired by Nokia, and was mainly responsible for 3 games. I used the last generation of XNA engine and Silverlight, and began to gradually understand Microsoft's XAML technology stack. I was a beginner at the time, and the project was relatively large. At that time, five or six people worked on more than 20 games together, and each person was responsible for three or four.
+- **Silverlight for Windows Phone/C#/XNA/XAML/Cocos2d**
 
-# Open Source Projects and Works
+## Skills
 
-## Open Source Projects
+**Programming Languages:** <span class="iconify" data-icon="vscode-icons:file-type-csharp"></span> C#, <span class="iconify" data-icon="vscode-icons:file-type-js-official"></span> JavaScript / <span class="iconify" data-icon="vscode-icons:file-type-typescript-official"></span> TypeScript
 
-- [strapi-csharp-sdk](https://github.com/strapi-extensions/strapi-csharp-sdk): C# SDK for Strapi CMS, based on .NET 6, supporting both server-side and client-side.
-- [localKube](https://github.com/kubernetes-go/localkube): CI/CD command-line tool based on Microk8s and Docker for Kubernetes. Supports multi-cluster multi-template rendering to generate Yaml files, relying on docker/helm/git for compilation, packaging, template rendering, deployment, and other convenient functions.
-- [DoChat](https://github.com/wujun4code/DoChat): Live Chat Demo based on Ionic 2.
+**Web Development:** <span class="iconify" data-icon="vscode-icons:file-type-reactjs"></span> React (Basic), <span class="iconify" data-icon="vscode-icons:file-type-angular"></span> Angular (Basic) <span class="iconify" data-icon="vscode-icons:file-type-asp"></span> ASP.NET Razor
 
-# Skill set
+**Web Frameworks:** <span class="iconify" data-icon="vscode-icons:file-type-asp"></span>ASP.NET Core (Proficient), <span class="iconify" data-icon="vscode-icons:file-type-node"></span> Express (Basic)
 
-- **Programming Languages:** C# (Proficient), TypeScript (Proficient)
-- **Web Development:** React (Basic), Angular (Basic)
-- **Desktop:** WPF (Basic)
-- **Mobile Platforms:** Ionic (Proficient)
-- **Web Frameworks:** ASP.NET Core (Proficient), Express (Basic)
-- **Frontend Frameworks:** Angular 2+ (Basic), React (Basic)
-- **Frontend Tools:** Gulp (Proficient), SaSS (Basic), Gatsby (Basic)
-- **Databases:** MongoDB (Proficient), SQL Server (Basic), Postgres(Basic)
-- **Message Queues:** RabbitMQ (Proficient), Kafka (Basic)
-- **Version Control/Deployment Tools:** Git (Proficient), Markdown (Proficient),
-- **CI/CD**: Jenkins (Proficient), Azure DevOps (Proficient), GitHub Actions (Proficient), FluxCD(Proficient), Harness(Proficient)
-- **Virtualization:** Kubernetes (Proficient), System Center (Basic)
-- **Backend Components:** Kubernetes (Proficient), Redis (Basic), ELK (Proficient), Docker (Proficient)
-- **Testing:** XUnit (Proficient), Mocha (Proficient)
-- **Cloud Platforms:** GCP (Proficient), Azure (Proficient), Tencent Cloud/Aliyun/DigitalOcean (Basic)
-- **IDEs:** Visual Studio (Proficient), Visual Studio Code (Proficient), IDEA(Basic)
-- **Operating Systems:** Linux (ElementaryOS,Ubuntu) (Proficient), macOS (Proficient), Windows (Proficient)
-- **Language:** English (Fluent)
+**Databases:** <span class="iconify" data-icon="vscode-icons:file-type-mongo"></span> MongoDB (Proficient), <span class="iconify" data-icon="vscode-icons:file-type-sql"></span>SQL Server (Basic), <span class="iconify" data-icon="vscode-icons:file-type-sql"></span>Postgres(Basic)
 
-Feel free to let me know if you have any specific preferences or if there are any modifications you'd like!
+**Message Queues:** <span class="iconify" data-icon="logos:rabbitmq-icon"></span>RabbitMQ (Proficient), <span class="iconify" data-icon="logos:kafka-icon"></span> Kafka (Basic)
+
+**Version Control/Deployment Tools:** <span class="iconify" data-icon="mdi:git" data-inline="false"></span>Git(Proficient), <span class="iconify" data-icon="material-symbols:markdown" data-inline="false"></span>Markdown(Proficient),
+
+**CI/CD**: <span class="iconify" data-icon="vscode-icons:file-type-jenkins" data-inline="false"></span>Jenkins (Proficient), <span class="iconify" data-icon="vscode-icons:file-type-azurepipelines"></span>Azure Pipelines&DevOps(Proficient), <span class="iconify" data-icon="logos:github-actions" data-inline="false"></span>GitHub Actions (Proficient), <span class="iconify" data-icon="simple-icons:flux" data-inline="false"></span>FluxCD(Proficient), <span class="iconify" data-icon="logos:harness-icon" data-inline="false"></span>Harness(Proficient)
+
+**Backend Components:** <span class="iconify" data-icon="logos:kubernetes" data-inline="false"></span>Kubernetes (Proficient), <span class="iconify" data-icon="logos:redis" data-inline="false"></span>Redis(Basic),<span class="iconify" data-icon="vscode-icons:file-type-elastic" data-inline="false"></span>Elasticsearch(Proficient),<span class="iconify" data-icon="vscode-icons:file-type-docker" data-inline="false"></span>Docker(Proficient)
+
+**Cloud Platforms:** <span class="iconify" data-icon="skill-icons:gcp-light" data-inline="false"></span>GCP (Proficient), <span class="iconify" data-icon="logos:azure-icon" data-inline="false"></span>Azure (Proficient), <span class="iconify" data-icon="icon-park:tencent-qq" data-inline="false"></span>Tencent Cloud/<span class="iconify" data-icon="ant-design:aliyun-outlined" data-inline="false"></span>Aliyun/<span class="iconify" data-icon="devicon:digitalocean" data-inline="false"></span>DigitalOcean (Basic)
+
+**IDEs:** <span class="iconify" data-icon="logos:visual-studio" data-inline="false"></span>Visual Studio (Proficient), <span class="iconify" data-icon="logos:visual-studio-code" data-inline="false"></span>Visual Studio Code (Proficient), <span class="iconify" data-icon="skill-icons:idea-light" data-inline="false"></span>IDEA(Basic)
+
+**Operating Systems:** <span class="iconify" data-icon="devicon:linux" data-inline="false"></span>Linux (ElementaryOS,Ubuntu) (Proficient), <span class="iconify" data-icon="gravity-ui:logo-macos" data-inline="false"></span>macOS (Proficient), <span class="iconify" data-icon="logos:microsoft-windows-icon" data-inline="false"></span>Windows (Proficient)
+
+**Language:** <span class="iconify" data-icon="icon-park-solid:chinese-one" data-inline="false"></span>Chinese(Native) <span class="iconify" data-icon="icon-park:english" data-inline="false"></span>English (Fluent)

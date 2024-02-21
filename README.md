@@ -1,2 +1,3 @@
-# blog
-hugo blog.
+# junwu.shouyicheng.com
+
+Blog built by Hugo.
