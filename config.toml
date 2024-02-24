@@ -16,7 +16,7 @@ author = "Jun Wu"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
 description = "Jun Wu's personal website"
 keywords = "blog,developer,personal"
-info = ["Full Stack DevOps"]
+info = ["Full Stack Developer & Kubernetes Egineer"]
 avatarURL = "/images/avataaars.png"
 #gravatar = "junwu@shouyicheng.com"
 dateFormat = "January 2, 2006"
