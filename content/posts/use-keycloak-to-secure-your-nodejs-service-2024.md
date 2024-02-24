@@ -179,6 +179,14 @@ just input client name with `dev-auth` only, all the left configs can been ignor
 
 ![create passwords](/images/create-passwords.png)
 
+try to set password like this, demo only, do NOT set this type of password in your production.
+
+- user: foo 
+- password: foo123
+
+- user: admin
+- passowrd: admin123
+
 all things is Keycloak side are done.
 
 ### Set Keycloak middleware for Express
