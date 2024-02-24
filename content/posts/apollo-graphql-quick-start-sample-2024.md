@@ -146,7 +146,7 @@ Congratulations. your fist milestone is done well.
 
 ## Wrap the upstream datasource
 
-> let talk a new topic: your legacy beckend service is an REST api web service, we can set graphql as a datasource angent, it can provide an unify entrance for clients(web/iOS/Android/Flutter, etc), 
+> let's talk a new topic: your legacy beckend service is an REST api web service, we can set graphql as a datasource angent, it can provide an unify entrance for clients(web/iOS/Android/Flutter, etc), 
 > that means we should call REST api in graphql server, then re-group/re-org the response to clients. graphql can play a middleware role to handle multiple datasources.
 
 {{<mermaid>}}
