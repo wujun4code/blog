@@ -491,9 +491,45 @@ sequenceDiagram
 
 {{</mermaid>}}
 
-- [keycloak-connect](https://www.npmjs.com/package/keycloak-connect) will get public key/certs from http://localhost:8080/realms/express-demo/protocol/openid-connect/certs
+- [keycloak-connect](https://www.npmjs.com/package/keycloak-connect) will get public key/certs from [http://localhost:8080/realms/express-demo/protocol/openid-connect/certs](http://localhost:8080/realms/express-demo/protocol/openid-connect/certs)
 
-you can go to [https://jwt.io/](https://jwt.io/) to verify your token manually.
+please go to [http://localhost:8080/realms/express-demo/protocol/openid-connect/certs](http://localhost:8080/realms/express-demo/protocol/openid-connect/certs) to get your public key/certs.
+
+```json
+{
+  "keys": [
+    {
+      "kid": "x20fqA32CtrJGukIB5U1YhCDookaaXtlIEDhtBwj6ss",
+      "kty": "RSA",
+      "alg": "RS256",
+      "use": "sig",
+      "n": "lRUEZzahCKh2QFz0LpiZyaoIGXksqZQ9g8aLtlVvTBg9_gXExz4gjTZeZN5H_Xx6_5Ze3ZRWAKg9u4IN1xvdWOa5Eq6QeXc-csMjrTiGZfL5Z1Ov9KvuSl3W8tgVyytw2-zB9yI905tjGc5W8MIKSKBLkA_-K2opSze37sxRo70oqv-JR34sPcbEo1deI8Qq869qIHiRrUApmxuj3nDsALaIKrzjwDF0Hr1Z1U4UrxYYYoYnVDDbyQeCTh7fRfHpfRr_18e82by5sOckXcudabjCbqz7t84iCLa2OwNz3mR5F3mh6kqpG-OVmTHDNSFfnvK6pvDtXhlVLzZbqpSmnw",
+      "e": "AQAB",
+      "x5c": [
+        "MIICpzCCAY8CBgGN3dERszANBgkqhkiG9w0BAQsFADAXMRUwEwYDVQQDDAxleHByZXNzLWRlbW8wHhcNMjQwMjI1MDEwOTQyWhcNMzQwMjI1MDExMTIyWjAXMRUwEwYDVQQDDAxleHByZXNzLWRlbW8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCVFQRnNqEIqHZAXPQumJnJqggZeSyplD2Dxou2VW9MGD3+BcTHPiCNNl5k3kf9fHr/ll7dlFYAqD27gg3XG91Y5rkSrpB5dz5ywyOtOIZl8vlnU6/0q+5KXdby2BXLK3Db7MH3Ij3Tm2MZzlbwwgpIoEuQD/4railLN7fuzFGjvSiq/4lHfiw9xsSjV14jxCrzr2ogeJGtQCmbG6PecOwAtogqvOPAMXQevVnVThSvFhhihidUMNvJB4JOHt9F8el9Gv/Xx7zZvLmw5yRdy51puMJurPu3ziIItrY7A3PeZHkXeaHqSqkb45WZMcM1IV+e8rqm8O1eGVUvNluqlKafAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAFxSFu+rE8nwF5BWRyesb3YER9IpCBgtVhEy0mtM2+BE4cM9Z2NUJ14tMXPofFk2SipefPImX+R9U2L9hIaAENQFlyMw58NHwKlhclkCB74k3S3OzzJRmTz3O7SSlViJUoV/ODBOdNTPYi8ZS09JwtyFeNu1Ber5Tf3ucjrpYCvOdCCAF/E1IrDMLxMWuv5qGicIOd1x+nHJD3pFN6z+8L7WwMdi+UdCmqaytXHtl6oiyuoa07uAIEKKcagRPR+CMU1zDa5OyZ8+lkxZfU8IfwiVe6PfYt6xh3nxF7vNrhcQdrGwwN3kOn+xQJQVWidl6rpOUTIr5H1eFWRV/T4a5Uk="
+      ],
+      "x5t": "uOixjC3EZPHJ-O8gfcjMLyRaiuI",
+      "x5t#S256": "wFsYZihCnx7CnRXQ_ZQK38EzbpWjA9SkwlUBfOQR2PY"
+    },
+    {
+      "kid": "04CCtah5XxLzBB8Rvuin6vSBIA4jICozElhTeiwMmac",
+      "kty": "RSA",
+      "alg": "RSA-OAEP",
+      "use": "enc",
+      "n": "uj9VjPD2eomE8VMLvNlswUzCzGesh1STIKeTWNoDqIqLTHXyqG7C_q50Vegq5hJeN9ijLVSB5DQECRc9BrCX4Qj2JL50nayO1FMA_QWO-Gta3M-VDgV2ikxP3mMSjXNP0Msq3atbsQRz4PL28JtFQtLQp-Qs3Z5hSJhit5OvbsnUoemKu1fwW-4BiArr7PSKAeRqCnWwQgOxX7N4trTqt1XsOyo8W6p2ncOusnVTHqvvG0lbpblZ84PvUCCSJ0Ykq9I5D9-aCmR-_9PKmeWQo-1BJqk2BTyOm7escKrpIO1mlvwvEwFyqjxpkluR0-nfsusE2MOCWt96Z-64sJaUOQ",
+      "e": "AQAB",
+      "x5c": [
+        "MIICpzCCAY8CBgGN3dESrjANBgkqhkiG9w0BAQsFADAXMRUwEwYDVQQDDAxleHByZXNzLWRlbW8wHhcNMjQwMjI1MDEwOTQzWhcNMzQwMjI1MDExMTIzWjAXMRUwEwYDVQQDDAxleHByZXNzLWRlbW8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC6P1WM8PZ6iYTxUwu82WzBTMLMZ6yHVJMgp5NY2gOoiotMdfKobsL+rnRV6CrmEl432KMtVIHkNAQJFz0GsJfhCPYkvnSdrI7UUwD9BY74a1rcz5UOBXaKTE/eYxKNc0/Qyyrdq1uxBHPg8vbwm0VC0tCn5CzdnmFImGK3k69uydSh6Yq7V/Bb7gGICuvs9IoB5GoKdbBCA7Ffs3i2tOq3Vew7Kjxbqnadw66ydVMeq+8bSVuluVnzg+9QIJInRiSr0jkP35oKZH7/08qZ5ZCj7UEmqTYFPI6bt6xwqukg7WaW/C8TAXKqPGmSW5HT6d+y6wTYw4Ja33pn7riwlpQ5AgMBAAEwDQYJKoZIhvcNAQELBQADggEBAHV4TC129PdBx34JgSWMhpp1ytmECvrM1IdnDOrC9KuM7kmKzEiDRlEG6ElDbU1duzrE/CkZmVNwDUDaHtAvPGCixeQfHyRd+KRWTnNqKhlvLhngLPOHljybp4THLMYAesmyFDqySnJiQglyiY4KlbBMoWt0rvZ7+3FbrCR6XdMxZU27YCdANopXE0RaRLEKT4KEWGTQ/6PZ8yjfdkGTBQ6Mxxltky1d7T7SuEufnJAOo1SinXv+ypXIke2ug0+SXekAuBCG5sBb91739gI5ATGuObzlkbnHAd16f6ddmb49JU//Y2ICy6/5V+f8CT+e+YiQBs9b54XUpmyjnfXK5EQ="
+      ],
+      "x5t": "7gZ4100kJvz2QGO765XZ-jCAVzw",
+      "x5t#S256": "2kcRZp8RoCiPQjLBOMhuvz5z79MDyzvFOSHmZgNlPlY"
+    }
+  ]
+}
+```
+pick the `x5c` value from `alg:RS256`.
+
+then you can go to [https://jwt.io/](https://jwt.io/) to verify your token manually.
 
 1. paste your token on the left input box
 2. insert your `x5c` value between `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`
