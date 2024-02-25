@@ -63,9 +63,10 @@ add the following content to it:
 ```json
 {
     "watch": [
-        "src"
+        "src",
+        ".env"
     ],
-    "ext": "ts",
+    "ext": ".ts",
     "ignore": [
         "src/**/*.spec.ts"
     ],
@@ -151,6 +152,56 @@ npm run dev
 
 ```shell
 docker run -p 8080:8080 -d -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:23.0.7 start-dev
+```
+
+if you want to keep the config even stop the Keycloak container, please use a persistent storage linked. try the following docker compose file
+
+```yml
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    container_name: keycloak-postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: dbpw1234
+    ports:
+      - '5432:5432'
+    networks:
+      - keycloak
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    container_name: keycloak
+    environment:
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://postgres:5432/keycloak
+      KC_DB_USERNAME: keycloak
+      KC_DB_PASSWORD: dbpw1234
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin1234
+    command: start-dev
+      # Uncomment the line below if you want to specify JDBC parameters. The parameter below is just an example, and it shouldn't be used in production without knowledge. It is highly recommended that you read the PostgreSQL JDBC driver documentation in order to use it.
+      #JDBC_PARAMS: "ssl=true"
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres
+    networks:
+      - keycloak
+
+networks:
+  keycloak:
+    name: keycloak
+    driver: bridge
+volumes:
+  postgres_data:
+    driver: local
+
 ```
 
 ### Set and config Keycloak
@@ -363,7 +414,7 @@ try to access `secured`
 
 ```shell
 curl --location http://localhost:3000/secured \
-  --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJFbFlqelNKcENaa0RaNVl6Q243dF9lU3FSc1oxblZCRFc5NjVLYkhyOFJrIn0.eyJleHAiOjE3MDg3NzM0MzYsImlhdCI6MTcwODc3MzEzNiwianRpIjoiZDMyOGU3MWYtZmViZi00YWIwLWIxMGEtNGY4MTY5OWU2MzE3IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9leHByZXNzLWRlbW8iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZmYyYjJiMzYtMzU4ZS00OTcwLWFlZjgtYmI2ZjNmMjEzOTQ4IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZGV2LWF1dGgiLCJzZXNzaW9uX3N0YXRlIjoiYjgxNDY4MjEtNGJkZi00ZTg1LTgzNmQtOWNlYWIxZTI3Zjk3IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLWV4cHJlc3MtZGVtbyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6ImI4MTQ2ODIxLTRiZGYtNGU4NS04MzZkLTljZWFiMWUyN2Y5NyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IkZvbyIsInByZWZlcnJlZF91c2VybmFtZSI6ImZvbyIsImdpdmVuX25hbWUiOiJGb28ifQ.p7dfx-LZsPVRokiAarMx_nt-jnFbyWQlf8EnzX9SwjydL840ePG1DVfl4i9yIoaLcC8OyonW5F1RmAETW_HvR9jHLG_EpGZJHFj6K-zdohtsLsCinJ-fm2s07sQo8H9DxlWufEE7SkzKkbrIhZLzQLQ27Hi0UT-Qy7AN0cOqHcGP49xrEqr1KsB3EjW9zLjfwrk2cSpVDLsegEKerhJdEVnsIxVqxK9GD0Cv3PCcNqFOJlaK6GBm1uiWyDXKH5YUZ8MkwQ8qcgl727UiFZP_vKM8dFxTTCwGAcPQAPiL23sM3Ij4k_5wJFKtKYyn_QX2p27OYgP9ZPNL3K7KIAqSWw'
+  --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ4MjBmcUEzMkN0ckpHdWtJQjVVMVloQ0Rvb2thYVh0bElFRGh0QndqNnNzIn0.eyJleHAiOjE3MDg4MzI0NDIsImlhdCI6MTcwODgzMDY0MiwianRpIjoiNWY5Nzk5ZmMtZTJlZC00ZTNkLWJiNjMtYmUxMTA2ZjJjNmM2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9leHByZXNzLWRlbW8iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiMDhmY2JlNmQtZGJhNC00NDg3LTljMzAtOGYzODdkOGQ4M2VjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZGV2LWF1dGgiLCJzZXNzaW9uX3N0YXRlIjoiMjMxNWQzMzYtMzdjMi00NmQ2LWJhOWQtNjczZDQ2ZWQwZjI4IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1leHByZXNzLWRlbW8iLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjIzMTVkMzM2LTM3YzItNDZkNi1iYTlkLTY3M2Q0NmVkMGYyOCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IkZvbyBCYXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJmb28iLCJnaXZlbl9uYW1lIjoiRm9vIiwiZmFtaWx5X25hbWUiOiJCYXIifQ.A8OytfZkogcWJXoU7rVzQPNLw08rBMYlcT-BO_77_ogA3IAMxUE0lRTVR0gbYrFgaXnfzqbjMYm34sGIaQtJ6IMyRFGO1uNtjbXkaTX0eVnijk_eHoJJg3B8FK5Yaq-mTJwejJhQEcl7TOp24tjVNZGZS2wm6Cq7KGpjrXdaRxgOn4SID4gUWqkkVW7OasPh6GBjyEvv4sUK0H00NCjiJHSo1rgBA4khpIUkzCpceuIw7p1HGrIdKhLnOmw8LNgo0U9AbxD4aVFTR1J2WftBl4m8yDaNoPS3WuB48qlzohlL21xDXkC-pFMvaDJRem1ScJSA6d0dTJWw0N61YZ5ekw'
 ```
 
 you will see
@@ -428,6 +479,36 @@ X-Powered-By: Express
 
 all done.
 
+## How keycloak-connect middleware work
+
+{{<mermaid>}}
+sequenceDiagram
+    Clients->>+keycloak-connect: Hello Express, i want access /secured endpoint,here is my token
+    keycloak-connect->>+Keycloak Server: Hi Keycloak, show me public key/certs
+    Keycloak Server-->>-keycloak-connect: Hi Express, here is public key/certs
+    keycloak-connect-->>-keycloak-connect: verify signature with public key,if token is valid then go next middleware,if invalid return 403
+    keycloak-connect->>+Clients: Hello Clients, your token is invalid, return 403
+
+{{</mermaid>}}
+
+- [keycloak-connect](https://www.npmjs.com/package/keycloak-connect) will get public key/certs from http://localhost:8080/realms/express-demo/protocol/openid-connect/certs
+
+you can go to [https://jwt.io/](https://jwt.io/) to verify your token manually.
+
+1. paste your token on the left input box
+2. insert your `x5c` value between `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`
+
+something like this
+
+```cert
+-----BEGIN CERTIFICATE-----
+MIICpzCCAY8CBgGN3dERszANBgkqhkiG9w0BAQsFADAXMRUwEwYDVQQDDAxleHByZXNzLWRlbW8wHhcNMjQwMjI1MDEwOTQyWhcNMzQwMjI1MDExMTIyWjAXMRUwEwYDVQQDDAxleHByZXNzLWRlbW8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCVFQRnNqEIqHZAXPQumJnJqggZeSyplD2Dxou2VW9MGD3+BcTHPiCNNl5k3kf9fHr/ll7dlFYAqD27gg3XG91Y5rkSrpB5dz5ywyOtOIZl8vlnU6/0q+5KXdby2BXLK3Db7MH3Ij3Tm2MZzlbwwgpIoEuQD/4railLN7fuzFGjvSiq/4lHfiw9xsSjV14jxCrzr2ogeJGtQCmbG6PecOwAtogqvOPAMXQevVnVThSvFhhihidUMNvJB4JOHt9F8el9Gv/Xx7zZvLmw5yRdy51puMJurPu3ziIItrY7A3PeZHkXeaHqSqkb45WZMcM1IV+e8rqm8O1eGVUvNluqlKafAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAFxSFu+rE8nwF5BWRyesb3YER9IpCBgtVhEy0mtM2+BE4cM9Z2NUJ14tMXPofFk2SipefPImX+R9U2L9hIaAENQFlyMw58NHwKlhclkCB74k3S3OzzJRmTz3O7SSlViJUoV/ODBOdNTPYi8ZS09JwtyFeNu1Ber5Tf3ucjrpYCvOdCCAF/E1IrDMLxMWuv5qGicIOd1x+nHJD3pFN6z+8L7WwMdi+UdCmqaytXHtl6oiyuoa07uAIEKKcagRPR+CMU1zDa5OyZ8+lkxZfU8IfwiVe6PfYt6xh3nxF7vNrhcQdrGwwN3kOn+xQJQVWidl6rpOUTIr5H1eFWRV/T4a5Uk=
+-----END CERTIFICATE----- 
+```
+
+then paste the content to the right botton input box, you will see the sample result with the screen shot
+
+![jwt-token-verifying](/images/jwt-token-verifying.png)
 
 ## Sample Source Code
 
