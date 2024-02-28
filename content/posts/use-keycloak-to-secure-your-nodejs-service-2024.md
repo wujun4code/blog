@@ -13,7 +13,7 @@ categories = [
     "beckend",
     "middleware"
 ]
-series = ["keycloak","nodejs"]
+series = ["Keycloak","nodejs"]
 +++
 
 
