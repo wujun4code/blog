@@ -553,5 +553,5 @@ then paste the content to the right botton input box, you will see the sample re
 
 ## Further Features
 
-1. Keycloak is a beckend service and do NOT provide a UI to login/signup, so you can integrate some front-end UI components based Express, or you can redirect by client side(React, etc.)
+1. Keycloak is full stack auth component with providing a UI to login/signup, you can get more details from google.
 2. Secure all your beckend services with a proxy, this proxy is armed by Keycloak, one solution is [oauth2-proxy](https://github.com/oauth2-proxy/oauth2-proxy).
