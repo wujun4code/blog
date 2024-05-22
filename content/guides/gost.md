@@ -126,7 +126,7 @@ services:
 test the config file
 
 ```sh
-gost -C gost.yml
+sudo gost -C gost.yaml
 ```
 
 
@@ -160,6 +160,5 @@ sudo systemctl enable gost
 sudo systemctl start gost
 sudo systemctl status gost
 ```
-
 
 
