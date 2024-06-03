@@ -148,11 +148,66 @@ kubeadm join 192.168.5.253:6443 --token s7t4mk.psxv48qwj0tqoinf \
         --discovery-token-ca-cert-hash sha256:6aefb9813d6f99d344282d57d3766771c13ebe9ddbd930a5b6a0f4ecfd42fdf0
 ```
 
-### Install network add on - Flannel
+### Check cluster
+
+```sh
+kubectl get pods -n kube-system
+```
+
+## Install network add on - Flannel
 
 ```sh
 kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 ```
+
+### Install load balancer - MetalLB
+
+>*Note*
+> more details can be found from -> https://metallb.universe.tf/installation/
+
+
+```sh
+kubectl edit configmap -n kube-system kube-proxy
+```
+
+and set 
+
+```yaml
+apiVersion: kubeproxy.config.k8s.io/v1alpha1
+kind: KubeProxyConfiguration
+mode: "ipvs"
+ipvs:
+  strictARP: true
+```
+
+
+install MetalLB 
+
+```sh
+kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.5/config/manifests/metallb-native.yaml
+```
+
+set IP range for load balancer
+
+```yaml
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: first-pool
+  namespace: metallb-system
+spec:
+  addresses:
+  - 192.168.5.210-192.168.5.240
+```
+
+```sh
+kubectl create deploy nginx --image nginx:latest
+```
+
+```sh
+kubectl expose deploy nginx --port 80 --type NodePort
+```
+
 
 ## Worker node
 
@@ -187,11 +242,6 @@ and then label the worker node
 kubectl label node kube-worker-1 node-role.kubernetes.io/worker=
 ```
 
-### Check cluster
-
-```sh
-kubectl get pods -n kube-system
-```
 
 ## Reset kubeadm
 
