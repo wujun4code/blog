@@ -62,6 +62,7 @@ Environment="NO_PROXY=localhost"
 ```
 
 ```sh
+sudo systemctl daemon-reload
 sudo systemctl start containerd
 sudo systemctl enable containerd
 sudo systemctl status containerd
@@ -187,10 +188,27 @@ and then label the worker node
 kubectl label node kube-worker-1 node-role.kubernetes.io/worker=
 ```
 
-### Check cluster
+## Check cluster
+
+```sh
+sudo vi /etc/kubernetes/manifests/kube-apiserver.yaml
+```
 
 ```sh
 kubectl get pods -n kube-system
+```
+
+```sh
+kubectl create deploy nginx --image nginx:latest
+kubectl delete deploy nginx
+```
+
+### list of containers
+
+```sh
+sudo nerdctl --namespace k8s.io ps -a
+
+sudo nerdctl logs  --namespace k8s.io 07a7ecfe4bae
 ```
 
 ## Reset kubeadm
