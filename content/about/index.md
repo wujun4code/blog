@@ -118,26 +118,26 @@ The core C# developer and maintainer of official tech docs.
 
 ## Skills
 
-**Programming Languages:** <span class="iconify" data-icon="vscode-icons:file-type-csharp"></span> C#, <span class="iconify" data-icon="vscode-icons:file-type-js-official"></span> JavaScript / <span class="iconify" data-icon="vscode-icons:file-type-typescript-official"></span> TypeScript
+- **Programming Languages**:  C#(Proficients),  JavaScript /  TypeScript (Proficient)
 
-**Web Development:** <span class="iconify" data-icon="vscode-icons:file-type-reactjs"></span> React (Basic), <span class="iconify" data-icon="vscode-icons:file-type-angular"></span> Angular (Basic) <span class="iconify" data-icon="vscode-icons:file-type-asp"></span> ASP.NET Razor
+- **Web Development**:  React (Proficient),  Angular (Basic)
 
-**Web Frameworks:** <span class="iconify" data-icon="vscode-icons:file-type-asp"></span>ASP.NET Core (Proficient), <span class="iconify" data-icon="vscode-icons:file-type-node"></span> Express (Basic)
+- **Web Frameworks**: ASP.NET Core (Proficient),  Express (Basic)
 
-**Databases:** <span class="iconify" data-icon="vscode-icons:file-type-mongo"></span> MongoDB (Proficient), <span class="iconify" data-icon="vscode-icons:file-type-sql"></span>SQL Server (Basic), <span class="iconify" data-icon="vscode-icons:file-type-sql"></span>Postgres(Basic)
+- **Databases**:  MongoDB (Proficient), SQL Server (Basic), Postgres(Basic)
 
-**Message Queues:** <span class="iconify" data-icon="logos:rabbitmq-icon"></span>RabbitMQ (Proficient), <span class="iconify" data-icon="logos:kafka-icon"></span> Kafka (Basic)
+- **Message Queues**: RabbitMQ (Proficient),  Kafka (Basic)
 
-**Version Control/Deployment Tools:** <span class="iconify" data-icon="mdi:git" data-inline="false"></span>Git(Proficient), <span class="iconify" data-icon="material-symbols:markdown" data-inline="false"></span>Markdown(Proficient),
+- **Version Control/Deployment Tools**: Git(Proficient), Markdown(Proficient),
 
-**CI/CD**: <span class="iconify" data-icon="vscode-icons:file-type-jenkins" data-inline="false"></span>Jenkins (Proficient), <span class="iconify" data-icon="vscode-icons:file-type-azurepipelines"></span>Azure Pipelines&DevOps(Proficient), <span class="iconify" data-icon="logos:github-actions" data-inline="false"></span>GitHub Actions (Proficient), <span class="iconify" data-icon="simple-icons:flux" data-inline="false"></span>FluxCD(Proficient), <span class="iconify" data-icon="logos:harness-icon" data-inline="false"></span>Harness(Proficient)
+- **CI/CD**: Jenkins (Proficient), Azure Pipelines&DevOps(Proficient), GitHub Actions (Proficient), FluxCD(Proficient), Harness(Proficient)
 
-**Backend Components:** <span class="iconify" data-icon="logos:kubernetes" data-inline="false"></span>Kubernetes (Proficient), <span class="iconify" data-icon="logos:redis" data-inline="false"></span>Redis(Basic),<span class="iconify" data-icon="vscode-icons:file-type-elastic" data-inline="false"></span>Elasticsearch(Proficient),<span class="iconify" data-icon="vscode-icons:file-type-docker" data-inline="false"></span>Docker(Proficient)
+- **Backend Components**: Kubernetes (Proficient), Redis(Basic),Elasticsearch(Proficient),Docker(Proficient)
 
-**Cloud Platforms:** <span class="iconify" data-icon="skill-icons:gcp-light" data-inline="false"></span>GCP (Proficient), <span class="iconify" data-icon="logos:azure-icon" data-inline="false"></span>Azure (Proficient), <span class="iconify" data-icon="icon-park:tencent-qq" data-inline="false"></span>Tencent Cloud/<span class="iconify" data-icon="ant-design:aliyun-outlined" data-inline="false"></span>Aliyun/<span class="iconify" data-icon="devicon:digitalocean" data-inline="false"></span>DigitalOcean (Basic)
+- **Cloud Platforms**: GCP (Proficient), Azure (Proficient), Tencent Cloud/Aliyun/DigitalOcean (Basic)
 
-**IDEs:** <span class="iconify" data-icon="logos:visual-studio" data-inline="false"></span>Visual Studio (Proficient), <span class="iconify" data-icon="logos:visual-studio-code" data-inline="false"></span>Visual Studio Code (Proficient), <span class="iconify" data-icon="skill-icons:idea-light" data-inline="false"></span>IDEA(Basic)
+- **IDE**: Visual Studio (Proficient), Visual Studio Code (Proficient), IDEA(Basic)
 
-**Operating Systems:** <span class="iconify" data-icon="devicon:linux" data-inline="false"></span>Linux (ElementaryOS,Ubuntu) (Proficient), <span class="iconify" data-icon="gravity-ui:logo-macos" data-inline="false"></span>macOS (Proficient), <span class="iconify" data-icon="logos:microsoft-windows-icon" data-inline="false"></span>Windows (Proficient)
+- **Operating Systems**: Linux (ElementaryOS,Ubuntu) (Proficient), macOS (Proficient), Windows (Proficient)
 
-**Language:** <span class="iconify" data-icon="icon-park-solid:chinese-one" data-inline="false"></span>Chinese(Native) <span class="iconify" data-icon="icon-park:english" data-inline="false"></span>English (Fluent)
+- **Language**: Chinese(Native) English (Fluent)
