@@ -5,7 +5,7 @@ date = "2024-01-19"
 description = "About me"
 +++
 
-- **Email:** junwu@shouyicheng.com
+- **Email:** wujun4code@gmail.com
 - **WeChat:** wing_wj
 
 # Personal Information
@@ -16,8 +16,8 @@ description = "About me"
 - **Education:** Bachelor's in Software Engineering, Liaoning University of Technology (2007-2011)
 - **Years of Experience:** 13
 - **Technical Blog:** 
-    - [个人博客- 中文](https://blog.shouyicheng.com)
     - [Jun's Blog - English](https://junwu.shouyicheng.com/)
+    - [KuberGuide](https://docs.kuberguide.org/)
 - **Github:** [http://github.com/wujun4code](http://github.com/wujun4code)
 
 
@@ -32,21 +32,26 @@ Bachelor's in Software Engineering
 ## Summary
 
 I am a seasoned full-stack developer with a comprehensive background in C# across various product lines, including Unity, WPF, SystemCenter, WP, ASP.NET, and .NET Core. Proficient in backend microservices development using Kubernetes and Docker. My expertise extends to diverse client platforms such as iOS, Android, Hybrid, and Web. I have a strong ability to quickly adapt to and utilize unfamiliar frameworks and technologies, demonstrating proficiency in tool application and framework utilization. I excel in understanding and interpreting requirements, with robust communication skills to convey complex technical details to colleagues with different backgrounds. Effective communication with international teams in English is one of my strengths. I have experience in maintaining large technical documentation projects and am skilled in copywriting.
-Now I am running my own Kubernetes cluster under the domain `shouyicheng.com`, for example, [个人博客- 中文](https://blog.shouyicheng.com) is running inside a Kubernetes hosted by Azure(AKE). for more samples please visit 
-
-- [Bookstack](https://bookstack.shouyicheng.com/)
-- [Keycloak](https://keycloak.shouyicheng.com/)
-- [Minio](https://console.minio.shouyicheng.com/)
-- [Strapi](https://strapi.shouyicheng.com/)
-
 
 ## Work Experience
+
+### Software Engineer @Maersk.com | 05/2014 - Now
+
+- A.P. Møller – Mærsk A/S (Danish: [ˈɛˀ ˈpʰe̝ˀ ˈmølɐ ˈmɛɐ̯sk]), usually known simply as Maersk (English: /mɛərsk/ MAIRSK), is a Danish shipping and logistics company founded in 1904 by Arnold Peter Møller and his father Peter Mærsk Møller. 
+
+#### Proejcts - Roles - Tech Stack
+
+**Carrier Tracking Integration - Backend Developer**
+
+- In the Carrier Tracking Integration project, I took on the role of a backend developer. The project aimed to integrate Maersk with various courier services across different countries, enabling real-time monitoring, management, and delivery status updates. It provides features such as shipment tracking, subscription management, and status notifications. My responsibilities included designing and developing shared components, drafting technical design documents based on requirements, and participating in development, operations, and delivery phases.
+- **C#/.NET Core/Kubernetes/CosmosDB/ASP.NET MVC/Kafka**
+
 
 ### Senior Beckend Engineer @iHerb.com | 01/2019 - 01/2024
 
 - iHerb is an E-commerce platform that sells health care products. During this period, I have been serving as a senior development engineer and participated in the development of many core projects. Participated in all projects related to e-commerce business
 
-### Proejcts - Roles - Tech Stack
+#### Proejcts - Roles - Tech Stack
 
 **Catalog - Core full-stack Developer**
 
