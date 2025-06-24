@@ -3,7 +3,7 @@ title = "Jun Wu"
 theme = "hugo-coder"
 languageCode = "en"
 defaultContentLanguage = "en"
-paginate = 6
+pagination.pagerSize = 6
 enableEmoji = true
 # Enable Disqus comments
 # disqusShortname = "yourdiscussshortname"
@@ -180,6 +180,24 @@ url = "posts/"
 
 [[languages.en.menu.main]]
 name = "Guide"
+weight = 3
+url = "guides/"
+
+[languages.zh-cn]
+languageName = ":cn:"
+
+[[languages.zh-cn.menu.main]]
+name = "关于"
+weight = 1
+url = "about/"
+
+[[languages.zh-cn.menu.main]]
+name = "博文"
+weight = 2
+url = "posts/"
+
+[[languages.zh-cn.menu.main]]
+name = "教程"
 weight = 3
 url = "guides/"
 
