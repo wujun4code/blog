@@ -116,7 +116,7 @@ then
 ```sh
 sudo netplan apply
 sudo rm /etc/resolv.conf
-service systemd-resolved restart
+sudo service systemd-resolved restart
 sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
 ```
 
