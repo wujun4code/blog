@@ -127,10 +127,59 @@ series = ["proxy"]
 
 3.这里的资源分配，内存给 1G 绝对够了，没有哪个 openwrt 的系统需要吃掉 512 的内存，256 都能跑
 
+![22](/images/guides/openwrt-for-engineer/22.png)
+
+4.下一步添加网络，请选择我们创建的第一个 虚拟交换机(Virtual Switch)，我这里是叫做 virtual-lan
+
+![23](/images/guides/openwrt-for-engineer/23.png)
 
 
 
-### 2. 我拥有一台可以刷 OpenWRT 的路由器
+5.紧接着要选择你虚拟机的 vhd，就是前面你解压并且制作的 vhd 
+
+![24](/images/guides/openwrt-for-engineer/24.png)
+
+![25](/images/guides/openwrt-for-engineer/25.png)
+
+6.添加第二个虚拟交换机，我这里叫做 external-usb-wired
+
+![26](/images/guides/openwrt-for-engineer/26.png)
+
+7.确认虚拟机如下配置
+
+> 注意这里的重点是，你创建虚拟机的时候指定的是 virtual-lan 的虚拟交换机，而创建完毕之后，需要再次添加第二个虚拟交换机, 确保 vrital-lan 是在 第二次创建的 external-usb-wired 的虚拟机交换机之上，这个顺序很重要
+
+
+![27](/images/guides/openwrt-for-engineer/27.png)
+
+### 启动和配置 OpenWRT
+
+1.启动虚拟机，右键虚拟机 -> 启动
+2.然后你需要查询你的 windows 的电脑是否有了一个新的ip，大概率是 192.168.20.101 类似
+3.通过你的浏览器输入 192.168.20.1，你就会看见如下界面
+
+![28](/images/guides/openwrt-for-engineer/28.png)
+
+#### 配置 OpenClash
+
+关于如何玩转 openclash 请移步 https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88，这个是全网最好的 openclash 配置文档，不用怀疑。
+
+#### Windows 自身需要禁用已连接的 vEthernet
+
+![29](/images/guides/openwrt-for-engineer/29.png)
+
+
+#### 虚拟机运行 OpenWRT 的业务逻辑
+
+{{<mermaid>}}
+sequenceDiagram
+    Windows->>+OpenWRT: Hello OpenWRT, 我通过 virtual lan 来获取你给我分配的 IP，现在你是我的上级路由了
+    WIFI->>+OpenWRT: OpenWRT, 我通过 external 虚拟交换机给你链接外网的能力
+    OpenWRT-->>-WIFI: Hi WIFI, 好的，我来接管宿主机的所有网络请求
+    OpenWRT-->>-WIFI: 我通过 OpenClash 来帮助我的宿主机科学上网
+{{</mermaid>}}
+
+另外依然强烈建议程序员一定要常备一台可以刷 OpenWRT 的路由器
 
 关于如何购买指导，我推荐一个网站 [猫点饭](https://mao.fan/)，你可以选取一款【支持刷机的】路由器，然后自行购买。
 
