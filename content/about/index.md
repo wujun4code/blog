@@ -35,7 +35,7 @@ I am a seasoned full-stack developer with a comprehensive background in C# acros
 
 ## Work Experience
 
-### Software Engineer @Maersk.com | 05/2014 - Now
+### Software Engineer @Maersk.com | 05/2024 - Now
 
 - A.P. Møller – Mærsk A/S (Danish: [ˈɛˀ ˈpʰe̝ˀ ˈmølɐ ˈmɛɐ̯sk]), usually known simply as Maersk (English: /mɛərsk/ MAIRSK), is a Danish shipping and logistics company founded in 1904 by Arnold Peter Møller and his father Peter Mærsk Møller. 
 

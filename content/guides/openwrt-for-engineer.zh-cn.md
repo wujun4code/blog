@@ -50,6 +50,85 @@ series = ["proxy"]
 
 3.其他选项如下图一样选择，注意后台地址一定不能与你电脑目前的路由器 IP 冲突，例如很多家庭常用的路由器是 192.168.1.1 或者是 10.0.0.1 这些常见的 IP，你可以改成 192.168.20.1 这种就不会冲突
 
+![4](/images/guides/openwrt-for-engineer/4.png)
+
+4. 点击构建新固件, 等待 2 分钟即可下载
+
+![5](/images/guides/openwrt-for-engineer/5.png)
+
+5. 将 kwrt-09.20.2024-x86-64-generic-squashfs-combined-efi.img.gz 解压成文件夹，该文件夹里面只有一个 img 文件 kwrt-09.20.2024-x86-64-generic-squashfs-combined-efi.img, 注意它文件的命名是根据你当前的日期决定的
+
+
+#### 下载镜像转换器 Starwindsoftware V2V Converter / P2V Migrator
+
+1.https://www.starwindsoftware.com/starwind-v2v-converter
+2.点击下载，它会问你要邮箱地址和一些信息，提供之后，它会发送下载连接给你的邮箱
+3.去邮箱点击下载就会下载好 starwindconverter.exe
+4.双击安装 starwindconverter.exe，之后如下图找到安装之后的 convertor
+
+![6](/images/guides/openwrt-for-engineer/6.png)
+
+5.启动之后，按照下面的步骤一步一步将 img 文件转化为 vhd 文件，这里面的逻辑就是将 efi img 镜像转化为 windows hyper-v 的 vhd 文件
+
+![7](/images/guides/openwrt-for-engineer/7.png)
+
+8.选择你刚才解压过的 img 文件
+
+![8](/images/guides/openwrt-for-engineer/8.png)
+
+![9](/images/guides/openwrt-for-engineer/9.png)
+
+9.转化成为 local file
+
+
+![10](/images/guides/openwrt-for-engineer/10.png)
+
+10.下一步之后如下选择
+
+![11](/images/guides/openwrt-for-engineer/11.png)
+
+11.下一步默认
+
+![12](/images/guides/openwrt-for-engineer/12.png)
+
+![13](/images/guides/openwrt-for-engineer/13.png)
+
+#### 正式开始创建 openwrt 虚拟机
+
+1.打开 Hyper-V Manager
+
+![14](/images/guides/openwrt-for-engineer/14.png)
+
+2.管理虚拟交换机
+
+![15](/images/guides/openwrt-for-engineer/15.png)
+
+3.选择 Internal -> Create Virtual Switch, 取名随意，推荐取名叫做 virtual-lan
+
+![16](/images/guides/openwrt-for-engineer/16.png)
+
+![17](/images/guides/openwrt-for-engineer/17.png)
+
+4.再创建一个新的 Virtual Switch，如下图
+
+![18](/images/guides/openwrt-for-engineer/18.png)
+
+#### 从 VHD 文件创建虚拟机
+
+![19](/images/guides/openwrt-for-engineer/19.png)
+
+1.输入虚拟机的名字，这里你随意
+
+![20](/images/guides/openwrt-for-engineer/20.png)
+
+2.下一步选择 Generation 1(中文：第一代)
+
+![21](/images/guides/openwrt-for-engineer/21.png)
+
+3.这里的资源分配，内存给 1G 绝对够了，没有哪个 openwrt 的系统需要吃掉 512 的内存，256 都能跑
+
+
+
 
 ### 2. 我拥有一台可以刷 OpenWRT 的路由器
 
