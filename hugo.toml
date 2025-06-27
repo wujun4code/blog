@@ -166,7 +166,7 @@ url = "https://twitter.com/JunWu4code"
 # type = "application/rss+xml"
 
 [languages.en]
-languageName = ":uk:"
+languageName = "EN"
 
 [[languages.en.menu.main]]
 name = "About"
@@ -184,7 +184,7 @@ weight = 3
 url = "guides/"
 
 [languages.zh-cn]
-languageName = ":cn:"
+languageName = "中文"
 
 [[languages.zh-cn.menu.main]]
 name = "关于"
