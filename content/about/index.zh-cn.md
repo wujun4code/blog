@@ -17,7 +17,7 @@ description = "关于我"
 - **工作经验：** 14年  
 
 - **技术博客：**  
-    - [俊的博客 - 英文版](https://junwu.shouyicheng.com/)  
+    - [博客](https://junwu.shouyicheng.com/)  
     - [KuberGuide](https://docs.kuberguide.org/)  
 - **Github：** [http://github.com/wujun4code](http://github.com/wujun4code)  
 
