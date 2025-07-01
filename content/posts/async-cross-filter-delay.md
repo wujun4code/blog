@@ -1,7 +1,7 @@
 +++
 authors = ["Jun Wu"]
 title = "Developer’s Guide: Elegant Architecture for Asynchronous, Multi-Condition Judgments with External Dependencies"
-date = "2024-02-23"
+date = "2025-06-30"
 description = ""
 tags = [
     "c#",
